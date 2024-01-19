@@ -1,0 +1,14 @@
+name: github-actions
+on:
+  push:
+    branches:
+      - "master"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest@${{ github.run_id }}
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+      - name:
+        run: echo Hello, world!
